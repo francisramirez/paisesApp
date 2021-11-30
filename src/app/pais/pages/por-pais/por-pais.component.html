@@ -1,0 +1,34 @@
+<h2>Por Pais</h2>
+<hr>
+<div class="row">
+  <div class="col">
+     <form (submit)="buscar()">
+         <input type="text"
+           name="cretrio"
+           placeholder="Buscar pais.."
+           class="form-control"
+           autocomplete="false" [(ngModel)]="criterio">
+
+     </form>
+  </div>
+</div>
+<hr>
+<div class="alert alert-danger" *ngIf="hayError">
+  No se encontró información con el criterio: {{criterio}}
+</div>
+<div class="row" *ngIf="!hayError">
+  <div class="col">
+      <table class="table table-hover">
+         <thead>
+           <th> # </th>
+           <th> Bandera </th>
+           <th> Nombre </th>
+           <th> Población </th>
+           <th></th>
+         </thead>
+         <tbody>
+
+         </tbody>
+      </table>
+  </div>
+</div>
